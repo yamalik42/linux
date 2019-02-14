@@ -1,0 +1,91 @@
+**************EX 1***************
+$ mkdir -p ~/exercise/dir1/dir2/dir3
+
+**************EX 2*************** 
+$ touch ./exercise/dir1/emptyFile1 ./exercise/dir1/emptyFile2
+
+**************EX 3***************
+$ cat > ./exercise/dir1
+>> Hello World! (^D)
+
+**************EX 4***************
+$ sudo find /etc -maxdepth 1 -name passwd
+>> /etc/passwd
+$ sudo cp /etc/passwd ./exercise/passwd_backup
+
+**************EX 5***************
+$ more -- views file one page at a time, use space to view next page
+$ less -- same as more but can also navigate single page vertically.
+$ head -- displays first 10 lines, or more if specified
+$ tail -- displays last part of file
+$ cat -- can read many files at once
+$ strings -- reads only strings of specified char length
+
+**************EX 6***************
+$ grep -c '/bin/false' passwd_backup
+
+**************EX 7***************
+$ head -5 passwd_backup > output.txt
+
+**************EX 8***************
+$ sudo useradd test
+$ sudo passwd test
+$ id -u test
+$ id -g test
+
+**************EX 9***************
+$ touch -d '2 hours ago' emptyFile1.txt emptyFile2.txt
+
+**************EX 10***************
+$ chgrp test output.txt
+$ chmod g+rw output.txt
+(switch user to test via UI)
+$ cd home/exercise/dir1
+$ cat > output.txt
+>> This is some text from test (^D)
+(switch back to yash via UI)
+$ cd ~/exercise/dir1
+$ chgrp yash output.txt
+$ chmod g-rw output.txt
+(change so world can edit)
+$ chmod o+rw output.txt
+$ chmod o-rw output.txt
+(change ownership)
+$ chown test output.txt
+
+**************EX 11***************
+$ alias yash='touch /tmp/aliastesting'
+
+**************EX 12***************
+$ su test
+$ nano ~/.bashrc
+(enter in bottom of file)
+>> clear
+>> echo 'Welcome'
+
+**************EX 13***************
+$ sudo apt-get install zip
+
+**************EX 14***************
+$ tar -cvf tball.tar output.txt passwd_backup
+$ tar -tvf tball.tar
+
+**************EX 15***************
+$ scp tball.tar /home/test
+
+**************EX 16***************
+$ ssh user@localhost
+$ tar xf tball.tar
+
+**************EX 17***************
+$ wget https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80
+$ mv 'photo-1507608616759-54f48f0af0ee?ixlib=rb-1.2.1' ~/Desktop
+
+**************EX 18***************
+$ man {command}
+
+**************EX 19***************
+$ ln -s /etc/services /tmp/ports-info
+
+**************EX 20***************
+$ whereis xyz
